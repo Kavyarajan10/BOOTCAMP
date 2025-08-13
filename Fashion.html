@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/51babbf03c.js" crossorigin="anonymous"></script>
+    <style>
+        .fashion{
+            background-color: rgb(240, 240, 245);
+            height: 80%;
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+        }
+        header{
+            height: 150px;
+        }
+        .logo{
+           color:rgb(17, 17, 17);
+           justify-content: space-around;
+           transition-duration: 8s;
+        }
+        .logo:hover{
+            transform: rotateY(360deg);
+        }
+        .fashion ul{
+           list-style-type: none;
+           display: flex;
+           justify-content: space-around;
+        }
+        .fashion ul li{
+           padding: 0% 5%;
+        }
+        .fashion ul li a{
+           color: rgb(8, 8, 8);
+           text-decoration: none;
+           font-size: 15px;
+        } 
+       .fashion a:hover{
+           background-color: black;
+        } 
+        .store{
+           border: 1px solid black ;
+           width: fit-content;
+           transition: 1s;    
+        }
+        /* .store:hover{
+           transform: scale(1.05);
+           z-index: 1;
+           cursor: pointer;
+        } */
+       .store p{
+           font-weight: bold;
+           font-size: large;
+            width:200px;
+           text-align: center;
+        }
+       .btn1{
+           width: 200px;
+           padding: 5px;
+           color: rgb(12, 12, 12);
+           background-color: rgb(240, 240, 245);
+        }
+        main .store{
+          float:left;
+          margin-left: 6px;
+          margin-top: 3px;
+        }
+        .drop{
+          cursor: pointer;
+        }
+        .down a{
+           display: block;
+           color: black;
+           text-decoration: none;
+           padding: 10px 15px;
+        }
+        .drop .down{
+           display: none;
+           position: absolute;
+           background-color: white;
+           min-width: 100px;
+           box-shadow: 2px 2px 5px black;
+        }
+       .drop:hover .down{
+          display: block;
+        } 
+        #container{
+            background-image: url(https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-03072024-TopBrandBanner-Z3-P3-Ishin-Vredevogel-flat75.jpg);
+            height: 70vh;
+            transition: 4s;
+            background-size: 100vw 100vh;
+            position: relative;
+            /* margin-bottom: 100px; */
+        }
+        #arrow-1{
+            position:absolute;
+            top: 45%;
+            transform: rotateY(180deg); 
+            cursor: pointer;    
+            z-index: 1;  
+        }
+        #arrow-2{
+            position:absolute;
+            right: 0;
+            top: 45%; 
+            cursor: pointer;    
+            z-index: 1;
+        }
+        .images{
+            display: flex;
+            position: absolute;
+            bottom: 7px;
+            right: 10px;
+        }
+        .abc{
+            opacity: 0.4;
+        }
+        .def{
+            opacity:1;
+        }
+        input{
+            height: 30px;
+            width: 300px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>      
+    <header>
+        <div class="fashion">
+            <h1 class="logo">FASHION STORE</h1>
+            <form action>
+                <input type="text" name="" id="" placeholder="search">
+            </form>
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-house"></i>HOME</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-info"></i>ABOUT</a></li>
+                <div class="drop">
+                    <li><a href="#"><i class="fa-solid fa-list"></i>CATEGORY</a></li>
+                    <div class="down">
+                <a href="">Fashion</a>
+                <a href="./mob.html" target="_blank">Mobile</a>
+                <a href="">Furniture</a>
+                <a href="">Personal Care</a>
+                <a href="">Toys and Baby</a>
+                    </div></div>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i>CART</a></li>
+                <li><a href="#"><i class="fa-solid fa-user"></i>ACCOUNT</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="arrows">
+                <img onclick="prev()" id="arrow-1" src="https://cdn0.iconfinder.com/data/icons/rounded-basics/24/rounded__right_arrow_head-512.png" alt="" height="90px" width="70px">
+                <img onclick="next()" id="arrow-2" src="https://cdn0.iconfinder.com/data/icons/rounded-basics/24/rounded__right_arrow_head-512.png" alt="" height="90px" width="70px">
+           </div>
+           <div id="container">
+           <div class="images">
+               <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-03072024-TopBrandBanner-Z3-P3-Ishin-Vredevogel-flat75.jpg" alt="" class="abc" height="70px" width="70px">
+               <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-03072024-TopBrandBanner-Z3-P5-AX-Superdry-min40.jpg" alt="" class="abc def" height="70px" width="70px">
+               <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-030724-DailyBanners-Z6-P2-max-r&b-under499.jpg" alt="" class="abc" height="70px" width="70px">
+               <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-030724-EMB-Z11-P1-Kibo-Ketch-min55.jpg" alt="" class="abc" height="70px" width="70px">
+           </div>
+           </div>
+        </section>
+        <h1>Collections You May Like</h1>
+        <section>
+        <div class="store">
+            <img src="https://alexnld.com/wp-content/uploads/2019/12/79f21062-49f8-49a9-9432-0126e73982af.jpg" height="200px" width="200px"><hr>
+            <p>LYMIO</p>
+            <p>RS:349</p>
+            <a href="./dress1.html"><button class="btn1">Buy Now</button></a>
+        </div>
+        <div class="store">
+            <img src="https://natalet.com/images5/1017/black-frock/black-frock-08_19.jpg" height="200px" width="200px"><hr>
+            <p>ZARA</p>
+            <p>RS:700</p>
+            <a href="./dress2.html"><button class="btn1">Buy Now</button></a>
+        </div>
+        <div class="store">
+            <img src="https://th.bing.com/th/id/OIP.MSVIsfvjLnA56EgfYCTLkgAAAA?rs=1&pid=ImgDetMain" height="200px" width="200px"><hr>
+            <p>FIT AND FLARE</p>
+            <p>RS:400</p>
+            <a href="./dress3.html"><button class="btn1">Buy Now</button></a>
+        </div>
+        <div class="store">
+            <img src="https://cdna.lystit.com/photos/puma/2eb31d54/puma-Puma-Black-Puma-White-Rebound-Layup-Sneakers.jpeg" height="200px" width="200px"><hr>
+            <p>PUMA</p>
+            <p>RS:699</p>
+            <a href="./dress4.html"><button class="btn1">Buy Now</button></a>
+        </div>
+        <div class="store">
+            <img src="https://th.bing.com/th/id/OIP.oiNz2rioY-RN3jRKjcN2owHaLH?rs=1&pid=ImgDetMain" height="200px" width="200px"><hr>
+            <p>RMKV SILKS</p>
+            <p>RS:1199</p>
+            <a href="./dress5.html"><button class="btn1">Buy Now</button></a>
+        </div>
+        <div class="store">
+            <img src="https://imgix.bustle.com/uploads/image/2019/6/14/90073241-e78c-4b78-b285-341c6581363d-original.jpg" height="200px" width="200px"><hr>
+            <p>AAHWAN</p>
+            <p>RS:289</p>
+            <a href="./dress6.html"><button class="btn1">Buy Now</button></a>
+        </div>
+        <div class="store">
+            <img src="https://cdn-img.prettylittlething.com/5/b/7/3/5b73a24d56ad3c5cb2cb7991de562ae865c9ded6_cmo1259_5.jpg" height="200px" width="200px"><hr>
+            <p>KNIT N KNOT</p>
+            <p>RS:400</p>
+            <a href="./dress7.html"><button class="btn1">Buy Now</button></a>
+        </div>
+        <div class="store">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/71nD%2BlzEoBL._UL1440_.jpg" height="200px" width="200px"><hr>
+            <p>JOKER N WITCH</p>
+            <p>RS:1500</p>
+            <a href="./dress8.html"><button class="btn1">Buy Now</button></a>
+        </div>
+        <div class="store">
+            <img src="https://i5.walmartimages.com/asr/8a873903-4f2d-4933-8e7f-cabddeef6062_1.5d6f369509520b886b9cca5490ebe896.jpeg" height="200px" width="200px"><hr>
+            <p>JOCKEY</p>
+            <p>RS:150</p>
+            <a href="./dress9.html"><button class="btn1">Buy Now</button></a>
+        </div>
+        <div class="store">
+            <img src="https://th.bing.com/th/id/OIP.DMjXnEBrTiltdAQvjLkBpQHaJQ?rs=1&pid=ImgDetMain" height="200px" width="200px"><hr>
+            <p>GoSriKi</p>
+            <p>RS:699</p>
+            <a href="./dress10.html"><button class="btn1">Buy Now</button></a>
+        </div>
+        <div class="store">
+            <img src="https://i.pinimg.com/originals/8e/9c/8a/8e9c8a024e72ed23de5a625ef7ffd5c4.jpg" height="200px" width="200px"><hr>
+            <p>FIT N FLARE</p>
+            <p>RS:469</p>
+            <a href="./dress11.html"><button class="btn1">Buy Now</button></a>
+        </div>
+        <div class="store">
+            <img src="https://d1eh9yux7w8iql.cloudfront.net/product_images/None_59a7092b-f2c4-40b9-9000-7987ecc6cd26.jpg" height="200px" width="200px"><hr>
+            <p>I PHONE</p>
+            <p>RS:73,000</p>
+            <a href="./dress12.html"><button class="btn1">Buy Now</button></a>
+        </div>
+        <div class="store">
+            <img src="https://i5.walmartimages.com/asr/cf013b18-d3a2-4bc2-9b69-d055035c6310_1.c2694981aefd0d1b7bd3e8546766398c.jpeg" height="200px" width="200px"><hr>
+            <p>BULLMER</p>
+            <p>RS:499</p>
+            <a href="./dress13.html"><button class="btn1">Buy Now</button></a>
+        </div>
+        <div class="store">
+            <img src="https://th.bing.com/th/id/OIP.fFMrzIBbGjwSPSNC5DtByQHaJL?rs=1&pid=ImgDetMain" height="200px" width="200px"><hr>
+            <p>ZARA</p>
+            <p>RS:999</p>
+            <a href="./dress14.html"><button class="btn1">Buy Now</button></a>
+        </div>
+        </section>
+        <script>
+               let arr = ['https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-03072024-TopBrandBanner-Z3-P3-Ishin-Vredevogel-flat75.jpg' , 'https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-03072024-TopBrandBanner-Z3-P5-AX-Superdry-min40.jpg' , 'https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-030724-DailyBanners-Z6-P2-max-r&b-under499.jpg','https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-030724-EMB-Z11-P1-Kibo-Ketch-min55.jpg']
+               let i=0;
+               let con = document.getElementById('container');
+               let conn = document.getElementsByClassName('abc');
+               let next = ()=>{
+                   conn[i].classList.remove('def');
+                   ++i;
+                   if(i==arr.length)
+                   {
+                       i=0;
+                   }
+                   conn[i].classList.add('def');
+                   con.style.backgroundImage='url("'+arr[i]+'")';
+                   console.log(i)
+               }
+               let prev = ()=>{
+                   conn[i].classList.remove('def');
+                   --i;
+                   if(i==-1)
+                   {
+                       i=arr.length-1;
+                   }
+                   conn[i].classList.add('def');
+                   con.style.backgroundImage='url("'+arr[i]+'")';
+                   console.log(i)
+                }
+                </script>
+                </main>
+</body>
+</html>
